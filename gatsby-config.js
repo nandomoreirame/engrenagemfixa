@@ -6,7 +6,7 @@ const siteMetadata = {
   social: {
     twitter: `oseunando`,
   },
-}
+};
 
 const plugins = [
   {
@@ -30,7 +30,9 @@ const plugins = [
         {
           resolve: `gatsby-remark-images`,
           options: {
-            maxWidth: 590,
+            maxWidth: 1024,
+            showCaptions: true,
+            linkImagesToOriginal: false,
           },
         },
         {
