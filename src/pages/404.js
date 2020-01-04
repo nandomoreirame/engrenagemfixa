@@ -1,32 +1,48 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { Link } from 'gatsby';
+import styled from '@emotion/styled';
 
-import Layout from '../components/layout';
+import Layout from '../components/blank';
 import SEO from '../components/seo';
 
-class NotFoundPage extends React.Component {
-  render() {
-    const { data } = this.props;
-    const siteTitle = data.site.siteMetadata.title;
+const ErrorStyle = styled.div`
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
 
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="Página não encontrada" />
-        <h1>Erro 404</h1>
-        <p>Você acabou de pegar uma rota que não existe... a que tristeza.</p>
-      </Layout>
-    );
+  h1 {
+    margin: 0;
+    font-size: 3rem;
+
+    @media (min-width: 420px) {
+      font-size: 6.3rem;
+    }
   }
-}
 
-export default NotFoundPage;
+  p {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 300;
 
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
+    @media (min-width: 420px) {
+      font-size: 1.2rem;
     }
   }
 `;
+
+export default () => (
+  <Layout>
+    <SEO title="Página não encontrada" />
+    <ErrorStyle>
+      <div>
+        <h1>Erro 404</h1>
+        <p>Você acabou de pegar uma rota que não existe... a que tristeza.</p>
+        <Link to="/">← Página inicial</Link>
+      </div>
+    </ErrorStyle>
+  </Layout>
+);

@@ -1,54 +1,48 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { rhythm, scale } from '../utils/typography';
 
 const FooterStyle = styled.footer`
-  padding: ${rhythm(1.2)} 0;
-
-  > div {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    max-width: ${rhythm(24)};
-    margin: 0 auto;
-    padding-left: ${rhythm(1.5)};
-    padding-right: ${rhythm(1.5)};
-  }
+  padding: 1.2rem 0;
 
   p {
     opacity: 0.6;
+    font-size: 0.8rem;
     margin: 0;
-  }
-
-  a {
-    margin-left: 5px;
   }
 `;
 
-export default () => (
+const FooterInnerStyle = styled.div`
+  text-align: center;
+  max-width: 769px;
+  margin: 0 auto;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+`;
+
+export default ({ title }) => (
   <FooterStyle>
-    <div>
-      <p style={{ ...scale(-1 / 3) }}>
-        &copy;{new Date().getFullYear()}, by{' '}
+    <FooterInnerStyle>
+      <p>
+        O Blog <strong>{title}</strong> é <em>open-source</em>, veja o{' '}
         <a
-          href="https://nandomoreira.dev"
+          href="https://github.com/nandomoreirame/engrenagemfixa"
           target="_blank"
           rel="noopener noreferrer"
         >
-          nandomoreira.dev
+          código fonte aqui.
         </a>
         .
       </p>
-      <p style={{ ...scale(-1 / 3) }}>
-        Made with ❤ and{' '}
+      <p>
+        &copy;{new Date().getFullYear()} ⏤ feito com ❤ por{' '}
         <a
-          href="https://www.gatsbyjs.org"
+          href="https://nandomoreira.dev/sobre"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Gatsby
+          Fernando Moreira.
         </a>
       </p>
-    </div>
+    </FooterInnerStyle>
   </FooterStyle>
 );
