@@ -24,7 +24,7 @@ Encontrei um site de uma bicicletaria aqui perto de casa, a [Bike Portella](http
 
 ![Amarelinha, Futura Rosanna](./images/bem-vindo-ao-engrenagem-fixa-compra-1.jpg)
 
-Tinha apenas dois tipos de bikes, ambas single speed, com cubo flip-flop para virar uma roda fixa. As cores não me agradaram, era uma mistura de cobra do mundo com show de horrores, a menos feia era a ~amarelinha~, porém rodas e cubos verdes, canote e pedivela vermelhos (WTF???)
+Tinha apenas dois tipos de bikes, ambas single speed, com cubo flip-flop se quiser transformar em _fixed gear_. As cores não me agradaram nenhum pouco, era uma mistura de Copa do Mundo com show de horrores, a _"menos feia"_ era a ~amarelinha~, porém tinha rodas e cubos verdes, canote e pedivela vermelhos (WTF???)
 
 Bem, resolvi que iria comprar ela.
 
