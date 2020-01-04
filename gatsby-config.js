@@ -52,7 +52,7 @@ const plugins = [
   {
     resolve: `gatsby-plugin-google-analytics`,
     options: {
-      trackingId: process.env.google_analytics_id,
+      trackingId: process.env.NODE_ENV === 'production' ? `UA-125092358-7` : '',
       head: false,
     },
   },
