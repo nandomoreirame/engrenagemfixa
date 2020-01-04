@@ -16,6 +16,7 @@ const NavStyle = styled.nav`
   left: 0;
   top: 50%;
   transform: translate3d(0, -50%, 0);
+  pointer-events: none;
 
   a {
     background: #e9e9e9;
@@ -26,6 +27,7 @@ const NavStyle = styled.nav`
     position: relative;
     text-decoration: none;
     transition: transform 0.2s linear;
+    pointer-events: all;
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 0.8rem;
@@ -123,6 +125,21 @@ const ContentStyle = styled.section`
     margin: 2rem auto 0;
     background: rgba(0, 0, 0, 0.15);
     opacity: 0.5;
+  }
+
+  ul,
+  ol {
+    padding-left: 2.4rem;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      &::before {
+        content: '⏤ ';
+      }
+    }
   }
 `;
 
