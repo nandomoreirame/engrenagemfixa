@@ -6,6 +6,7 @@ import Bio from '../components/bio';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import PostNav from '../components/post-nav';
+import Share from '../components/share';
 
 const ContentStyle = styled.section`
   h1,
@@ -104,6 +105,7 @@ class BlogPostTemplate extends React.Component {
     const { previous, next } = this.props.pageContext;
     const minutes = post.timeToRead.toFixed();
     const { words } = post.fields.readingTime;
+    const __html = `${post.html} <p>🚴</p>`;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -125,10 +127,14 @@ class BlogPostTemplate extends React.Component {
               </em>
             </div>
           </HeaderStyle>
-          <ContentStyle
-            dangerouslySetInnerHTML={{
-              __html: `${post.html} <p>🚴</p><hr />`,
-            }}
+          <Share
+            url={`${this.props.data.site.siteMetadata.siteUrl}${post.fields.slug}`}
+            title={`${post.frontmatter.title}`}
+          />
+          <ContentStyle dangerouslySetInnerHTML={{ __html }} />
+          <Share
+            url={`${this.props.data.site.siteMetadata.siteUrl}${post.fields.slug}`}
+            title={`${post.frontmatter.title}`}
           />
           <footer>
             <Bio />
@@ -146,6 +152,7 @@ export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     site {
       siteMetadata {
+        siteUrl
         title
       }
     }
@@ -160,6 +167,7 @@ export const pageQuery = graphql`
         description
       }
       fields {
+        slug
         readingTime {
           words
         }

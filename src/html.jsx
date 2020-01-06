@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const noscriptStyle = `
   .gatsby-noscript {
@@ -17,7 +17,8 @@ const noscriptStyle = `
     color: #fff;
     z-index: 10000;
   }
-`
+`;
+
 export default function HTML(props) {
   return (
     <html {...props.htmlAttributes}>
@@ -47,7 +48,7 @@ export default function HTML(props) {
         {props.postBodyComponents}
       </body>
     </html>
-  )
+  );
 }
 
 HTML.propTypes = {
@@ -57,4 +58,4 @@ HTML.propTypes = {
   preBodyComponents: PropTypes.array,
   body: PropTypes.string,
   postBodyComponents: PropTypes.array,
-}
+};
