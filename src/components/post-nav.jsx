@@ -6,12 +6,12 @@ export default ({ previous, next }) => {
   return (
     <PostNavStyle>
       {previous && (
-        <Link to={previous.fields.slug} className="prev" rel="prev">
+        <Link to={previous.frontmatter.slug} className="prev" rel="prev">
           <span>←</span> {previous.frontmatter.title}
         </Link>
       )}
       {next && (
-        <Link to={next.fields.slug} className="next" rel="next">
+        <Link to={next.frontmatter.slug} className="next" rel="next">
           {next.frontmatter.title} <span>→</span>
         </Link>
       )}

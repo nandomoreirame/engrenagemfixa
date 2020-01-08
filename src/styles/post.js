@@ -52,6 +52,14 @@ export const PostContentStyle = styled.section`
     padding-right: 0;
   }
 
+  .emoji-icon {
+    display: inline;
+    margin: 0;
+    position: relative;
+    top: 5px;
+    width: 25px;
+  }
+
   .gatsby-resp-image-figure {
     background-color: rgba(0, 0, 0, 0.05);
     display: block;

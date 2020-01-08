@@ -46,6 +46,7 @@ export const pageQuery = graphql`
             }
           }
           frontmatter {
+            slug
             date(locale: "pt-br", fromNow: true)
             title
             description

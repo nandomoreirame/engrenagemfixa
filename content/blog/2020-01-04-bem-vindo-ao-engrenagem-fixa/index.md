@@ -1,7 +1,6 @@
 ---
 slug: bem-vindo-ao-engrenagem-fixa
 title: 'Bem-vindo ao Engrenagem Fixa!'
-date: 2020-01-04T13:45:23.308Z
 description: >-
   Criei um blog (mais um) para falar um pouco sobre meus ~rolezins~ de bike fixa
   ⏤ conhecida como fixed gear ⏤ e outras coisas relacionadas.
@@ -9,6 +8,7 @@ categories:
   - Geral
 tags:
   - Rolezin
+date: 2020-01-04T13:45:23.308Z
 ---
 
 E aí rolezeiro! Tudo bom contigo?
@@ -62,3 +62,5 @@ O principal objetivo de ter comprado uma bike é porque eu amo muito motos e bic
 Eu quero não só ficar dando rolezins aleatórios no parque mas quero muito treinar com ela e quem sabe, [subir 25km de serra](https://www.glpromo.com.br/eventos-esportivos/6-desafio-serra-da-graciosa-de-ciclismo/84).
 
 Aguarde cenas do próximo rolezin.
+
+bye! :bicyclist:

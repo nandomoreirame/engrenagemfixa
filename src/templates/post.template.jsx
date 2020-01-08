@@ -15,7 +15,7 @@ class BlogPostTemplate extends React.Component {
     const { previous, next } = this.props.pageContext;
     const minutes = post.timeToRead.toFixed();
     const { words } = post.fields.readingTime;
-    const __html = `${post.html} <p>🚴</p>`;
+    const __html = post.html;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -38,12 +38,12 @@ class BlogPostTemplate extends React.Component {
             </div>
           </PostHeaderStyle>
           <Share
-            url={`${this.props.data.site.siteMetadata.siteUrl}${post.fields.slug}`}
+            url={`${this.props.data.site.siteMetadata.siteUrl}${post.frontmatter.slug}`}
             title={`${post.frontmatter.title}`}
           />
           <PostContentStyle dangerouslySetInnerHTML={{ __html }} />
           <Share
-            url={`${this.props.data.site.siteMetadata.siteUrl}${post.fields.slug}`}
+            url={`${this.props.data.site.siteMetadata.siteUrl}${post.frontmatter.slug}`}
             title={`${post.frontmatter.title}`}
           />
           <footer>
@@ -66,12 +66,13 @@ export const pageQuery = graphql`
         title
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)
       html
       timeToRead
       frontmatter {
+        slug
         title
         date(locale: "pt-br", fromNow: true)
         description

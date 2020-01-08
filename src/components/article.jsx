@@ -8,10 +8,10 @@ export default ({ post }) => {
   const { words } = post.fields.readingTime;
 
   return (
-    <ArticleStyle key={post.fields.slug}>
+    <ArticleStyle key={post.frontmatter.slug}>
       <header>
         <h1>
-          <Link style={{ boxShadow: `none` }} to={post.fields.slug}>
+          <Link style={{ boxShadow: `none` }} to={post.frontmatter.slug}>
             {title}
           </Link>
         </h1>

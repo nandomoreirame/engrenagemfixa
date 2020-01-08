@@ -1,7 +1,6 @@
 ---
 slug: strava-app-voce-precisa-conhecer
 title: 'Strava, o app que você precisa conhecer!'
-date: 2020-01-04T20:47:04.116Z
 description: >-
   Se você é como eu, está iniciando no submundo dos treinos com sua magrela e
   caiu aqui atrás de um aplicativo TOPIZERA (me julgue), então você precisa
@@ -11,6 +10,7 @@ categories:
 tags:
   - Apps
   - Treino
+date: 2020-01-04T20:47:04.116Z
 ---
 
 Se você é como eu, está iniciando no submundo dos treinos com sua magrela e caiu aqui atrás de um aplicativo **TOPIZERA** (me julgue), então você precisa conhecer o [**_Strava_**](https://www.strava.com/).
@@ -70,3 +70,5 @@ Tem muita coisa pra falar do **_Strava_** ainda (é sério), mas vou para por aq
 ![Perfil aberto no app do celular](./images/strava-o-app-que-voce-precisa-conhecer-perfil-app.png)
 
 E para encerrar, eu vou deixando aqui o meu perfil ([strava.com/athletes/oseunando](https://www.strava.com/athletes/oseunando)), me segue lá e veja por onde ando com minha **Engrenagem Fixa!**
+
+Até! :bicyclist:

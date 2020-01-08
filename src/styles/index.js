@@ -6,3 +6,4 @@ export * from './post';
 export * from './post-nav';
 export * from './header';
 export * from './footer';
+export * from './share';

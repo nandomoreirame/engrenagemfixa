@@ -44,9 +44,16 @@ const plugins = [
         },
         `gatsby-remark-reading-time`,
         {
+          resolve: 'gatsby-remark-embed-youtube',
+          options: {
+            width: 800,
+            height: 400,
+          },
+        },
+        {
           resolve: `gatsby-remark-responsive-iframe`,
           options: {
-            wrapperStyle: `margin-bottom: 1.0725rem`,
+            wrapperStyle: `margin-bottom: 1.2rem`,
           },
         },
         {
@@ -67,6 +74,16 @@ const plugins = [
           },
         },
         `gatsby-remark-smartypants`,
+        {
+          resolve: 'gatsby-remark-emojis',
+          options: {
+            active: true,
+            class: 'emoji-icon',
+            escapeCharacter: '',
+            size: 64,
+            styles: {},
+          },
+        },
       ],
     },
   },
