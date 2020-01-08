@@ -1,6 +1,7 @@
 ---
-slug: bem-vindo-ao-engrenagem-fixa
+date: 2020-01-04T13:45:23.308Z
 title: 'Bem-vindo ao Engrenagem Fixa!'
+slug: bem-vindo-ao-engrenagem-fixa
 description: >-
   Criei um blog (mais um) para falar um pouco sobre meus ~rolezins~ de bike fixa
   ⏤ conhecida como fixed gear ⏤ e outras coisas relacionadas.
@@ -8,7 +9,6 @@ categories:
   - Geral
 tags:
   - Rolezin
-date: 2020-01-04T13:45:23.308Z
 ---
 
 E aí rolezeiro! Tudo bom contigo?

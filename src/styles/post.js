@@ -60,7 +60,8 @@ export const PostContentStyle = styled.section`
     width: 25px;
   }
 
-  .gatsby-resp-image-figure {
+  .gatsby-resp-image-figure,
+  .gatsby-resp-iframe-wrapper {
     background-color: rgba(0, 0, 0, 0.05);
     display: block;
     margin-left: auto;
@@ -75,6 +76,10 @@ export const PostContentStyle = styled.section`
     font-style: italic;
     opacity: 0.75;
     font-size: 80%;
+  }
+
+  .gatsby-resp-iframe-wrapper iframe {
+    border: none;
   }
 
   hr {

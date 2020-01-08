@@ -39,15 +39,12 @@ module.exports = async ({ graphql, actions }) => {
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node;
     const next = index === 0 ? null : posts[index - 1].node;
+    const slug = post.node.frontmatter.slug || post.node.fields.slug;
 
     createPage({
-      path: post.node.frontmatter.slug,
+      path: slug,
       component: blogPost,
-      context: {
-        slug: post.node.frontmatter.slug,
-        previous,
-        next,
-      },
+      context: { slug, previous, next },
     });
   });
 };
