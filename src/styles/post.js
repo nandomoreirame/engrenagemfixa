@@ -47,6 +47,11 @@ export const PostContentStyle = styled.section`
     padding-right: 1.2rem;
   }
 
+  a.anchor.before {
+    box-shadow: none;
+    padding-right: 0;
+  }
+
   .gatsby-resp-image-figure {
     background-color: rgba(0, 0, 0, 0.05);
     display: block;
