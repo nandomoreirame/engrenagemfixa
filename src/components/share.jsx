@@ -14,7 +14,7 @@ import { ShareStyles } from '@styles';
 export default ({ title, url }) => (
   <ShareStyles>
     <div>
-      <h3>Gostou? Compartilhe: </h3>
+      <h3>Compartilhe com seus amigos: </h3>
       <WhatsappShareButton
         url={url}
         title={title}

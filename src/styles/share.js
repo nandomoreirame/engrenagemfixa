@@ -7,16 +7,23 @@ export const ShareStyles = styled.aside`
   text-align: center;
 
   > div {
-    align-items: center;
-    display: flex;
-    justify-content: center;
+    @media (min-width: 790px) {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
   }
 
   h3 {
-    margin: 0 1.2rem 0 0;
+    margin: 0 0 1rem 0;
     font-weight: 300;
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 0.8rem;
+
+    @media (min-width: 790px) {
+      margin: 0 1.2rem 0 0;
+      font-size: 1rem;
+    }
   }
 
   button,
@@ -24,12 +31,17 @@ export const ShareStyles = styled.aside`
     display: inline-block;
     line-height: 1;
     margin: 0;
+    width: 42px;
+    height: 42px;
+
+    @media (min-width: 790px) {
+      width: 28px;
+      height: 28px;
+    }
   }
 
   button {
     appearance: none;
-    width: 26px;
-    height: 26px;
     transition: transform 0.12s ease-in-out;
 
     &:not(:last-child) {
