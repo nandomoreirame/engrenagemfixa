@@ -38,12 +38,12 @@ class BlogPostTemplate extends React.Component {
             </div>
           </PostHeaderStyle>
           <Share
-            url={`${this.props.data.site.siteMetadata.siteUrl}${post.frontmatter.slug}`}
+            url={`${this.props.data.site.siteMetadata.siteUrl}/${post.frontmatter.slug}`}
             title={`${post.frontmatter.title}`}
           />
           <PostContentStyle dangerouslySetInnerHTML={{ __html }} />
           <Share
-            url={`${this.props.data.site.siteMetadata.siteUrl}${post.frontmatter.slug}`}
+            url={`${this.props.data.site.siteMetadata.siteUrl}/${post.frontmatter.slug}`}
             title={`${post.frontmatter.title}`}
           />
           <footer>
