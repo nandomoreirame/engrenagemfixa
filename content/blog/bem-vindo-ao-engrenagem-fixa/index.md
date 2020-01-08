@@ -1,4 +1,5 @@
 ---
+slug: bem-vindo-ao-engrenagem-fixa
 title: 'Bem-vindo ao Engrenagem Fixa!'
 date: 2020-01-04T13:45:23.308Z
 description: >-

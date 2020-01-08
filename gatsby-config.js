@@ -28,6 +28,13 @@ const plugins = [
     options: {
       plugins: [
         {
+          resolve: 'gatsby-remark-external-links',
+          options: {
+            target: '_blank',
+            rel: 'noopener noreferrer nofollow',
+          },
+        },
+        {
           resolve: `gatsby-remark-images`,
           options: {
             maxWidth: 1024,
@@ -80,7 +87,7 @@ const plugins = [
   {
     resolve: `gatsby-plugin-typography`,
     options: {
-      pathToConfigModule: `src/utils/typography`,
+      pathToConfigModule: `src/styles/typography`,
     },
   },
   // this (optional) plugin enables Progressive Web App + Offline functionality

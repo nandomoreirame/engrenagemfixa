@@ -1,9 +1,11 @@
 ---
+slug: strava-app-voce-precisa-conhecer
 title: 'Strava, o app que você precisa conhecer!'
 date: 2020-01-04T20:47:04.116Z
 description: >-
-  Se você é como eu, está iniciando no submundo dos treinos com sua magrela e caiu
-  aqui atrás de um aplicativo TOPIZERA (me julgue), então você precisa conhecer o Strava.
+  Se você é como eu, está iniciando no submundo dos treinos com sua magrela e
+  caiu aqui atrás de um aplicativo TOPIZERA (me julgue), então você precisa
+  conhecer o Strava.
 categories:
   - Apps
 tags:
