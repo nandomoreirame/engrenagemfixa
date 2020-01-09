@@ -4,6 +4,7 @@ export * from './bio';
 export * from './error';
 export * from './post';
 export * from './post-nav';
+export * from './comments';
 export * from './header';
 export * from './footer';
 export * from './share';

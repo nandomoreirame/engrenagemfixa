@@ -10,6 +10,7 @@ categories:
 tags:
   - Dicas
   - Filmes
+comments: true
 ---
 
 Hoje eu vou mandar uma dica de filme, um filminho antigo já (de 2012) mas vale parar para assistir, é entretenimento certo!

@@ -11,6 +11,7 @@ categories:
 tags:
   - Apps
   - Treino
+comments: true
 ---
 
 Se você é como eu, está iniciando no submundo dos treinos com sua magrela e caiu aqui atrás de um aplicativo **TOPIZERA** (me julgue), então você precisa conhecer o [**_Strava_**](https://www.strava.com/).

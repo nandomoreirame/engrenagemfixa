@@ -6,29 +6,37 @@ import Layout from '@components/layout';
 import SEO from '@components/seo';
 import PostNav from '@components/post-nav';
 import Share from '@components/share';
+import Disqus from '@components/comments';
 import { PostHeaderStyle, PostContentStyle } from '@styles';
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = this.props.data.markdownRemark;
-    const siteTitle = this.props.data.site.siteMetadata.title;
+    const { markdownRemark } = this.props.data;
+    const { siteMetadata } = this.props.data.site;
     const { previous, next } = this.props.pageContext;
-    const minutes = post.timeToRead.toFixed();
-    const { words } = post.fields.readingTime;
-    const __html = post.html;
+    const {
+      title,
+      slug,
+      description,
+      date,
+      comments,
+    } = markdownRemark.frontmatter;
+    const minutes = markdownRemark.timeToRead.toFixed();
+    const { words } = markdownRemark.fields.readingTime;
+    const __html = markdownRemark.html;
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location} title={siteMetadata.title}>
         <SEO
-          title={post.frontmatter.title}
-          description={post.frontmatter.description || post.excerpt}
+          title={title}
+          description={description || markdownRemark.excerpt}
         />
         <article>
           <PostHeaderStyle>
             <div>
-              <h1>{post.frontmatter.title}</h1>
+              <h1>{title}</h1>
               <em>
-                Publicado {post.frontmatter.date} | Tempo de leitura:{' '}
+                Publicado {date} | Tempo de leitura:{' '}
                 <strong role="timer">
                   {minutes} minuto
                   {`${minutes > 1 ? 's' : ''}`}
@@ -37,18 +45,19 @@ class BlogPostTemplate extends React.Component {
               </em>
             </div>
           </PostHeaderStyle>
-          <Share
-            url={`${this.props.data.site.siteMetadata.siteUrl}/${post.frontmatter.slug}`}
-            title={`${post.frontmatter.title}`}
-          />
+          <Share url={`${siteMetadata.siteUrl}/${slug}`} title={title} />
           <PostContentStyle dangerouslySetInnerHTML={{ __html }} />
-          <Share
-            url={`${this.props.data.site.siteMetadata.siteUrl}/${post.frontmatter.slug}`}
-            title={`${post.frontmatter.title}`}
-          />
+          <Share url={`${siteMetadata.siteUrl}/${slug}`} title={title} />
           <footer>
             <Bio />
             {(previous || next) && <PostNav previous={previous} next={next} />}
+            {comments && (
+              <Disqus
+                url={`${siteMetadata.siteUrl}/${slug}`}
+                identifier={slug}
+                title={title}
+              />
+            )}
           </footer>
         </article>
       </Layout>
@@ -76,6 +85,7 @@ export const pageQuery = graphql`
         title
         date(locale: "pt-br", fromNow: true)
         description
+        comments
       }
       fields {
         slug

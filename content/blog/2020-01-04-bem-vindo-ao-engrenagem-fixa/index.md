@@ -9,6 +9,7 @@ categories:
   - Geral
 tags:
   - Rolezin
+comments: true
 ---
 
 E aí rolezeiro! Tudo bom contigo?
