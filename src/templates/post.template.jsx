@@ -32,7 +32,13 @@ class BlogPostTemplate extends React.Component {
         description={siteMetadata.description}
         image={cover.childImageSharp.sizes.src}
       >
-        <SEO title={title} description={description || __excerpt} />
+        <SEO
+          title={title}
+          description={description || __excerpt}
+          url={`${siteMetadata.siteUrl}/${slug}`}
+          image={cover.childImageSharp.sizes.src}
+          isPost={true}
+        />
         <article>
           <PostHeaderStyle>
             <div>
