@@ -125,6 +125,14 @@ const plugins = [
       shortname: `engrenagemfixa`,
     },
   },
+  {
+    resolve: `gatsby-plugin-sitemap`,
+    options: {
+      output: `/sitemap.xml`,
+      exclude: [`/404`],
+      sitemapSize: 5000,
+    },
+  },
 ];
 
 module.exports = {
