@@ -22,33 +22,41 @@ export default () => {
       }
       site {
         siteMetadata {
-          author
-          social {
-            twitter
+          title
+          siteUrl
+          author {
+            name
+            bio
+            social {
+              strava
+              twitter
+            }
           }
         }
       }
     }
   `);
 
-  const { author, social } = data.site.siteMetadata;
-  const today = new Date();
-  const currentYear = today.getFullYear();
-  const age = currentYear - 1989;
+  const { author, title, siteUrl } = data.site.siteMetadata;
 
   return (
     <BioStyle>
-      <div>
-        <Image fixed={data.avatar.childImageSharp.fixed} alt={author} />
+      <div itemScope itemType="http://schema.org/Person">
+        <Image
+          fixed={data.avatar.childImageSharp.fixed}
+          alt={`Foto de ${author.name} autor do blog ${title}`}
+        />
         <div>
-          <h3>{author}</h3>
+          <h3 itemProp="name">{author.name}</h3>
           <p>
-            {age} anos, pai, minimalista, programador não por formação mas por
-            vocação, piadista e ciclista nas horas vagas
+            {author.bio}
+            <meta itemProp="jobTitle" content="Programador" />
+            <meta itemProp="worksFor" content="Onedev.studio" />
             <a
-              href={`https://nandomoreira.dev/sobre`}
+              href={`https://nandomoreira.dev/sobre?ref=${siteUrl}`}
               target="_blank"
               rel="noopener noreferrer"
+              itemProp="url"
             >
               ...
             </a>
@@ -56,21 +64,21 @@ export default () => {
           <p>
             <strong>Twitter:</strong> {` `}
             <a
-              href={`https://twitter.com/${social.twitter}`}
+              href={`https://twitter.com/${author.social.twitter}`}
               target="_blank"
               rel="noopener noreferrer"
             >
-              @{social.twitter}
+              twitter.com/{author.social.twitter}
             </a>
           </p>
           <p>
             <strong>Strava:</strong> {` `}
             <a
-              href={`https://strava.com/athletes/${social.twitter}`}
+              href={`https://strava.com/athletes/${author.social.strava}`}
               target="_blank"
               rel="noopener noreferrer"
             >
-              @{social.twitter}
+              strava.com/athletes/{author.social.strava}
             </a>
           </p>
         </div>

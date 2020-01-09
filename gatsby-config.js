@@ -1,10 +1,18 @@
+const today = new Date();
+const currentYear = today.getFullYear();
+
 const siteMetadata = {
   title: `Engrenagem Fixa`,
-  author: `Fernando Moreira`,
-  description: `🚴 Um blog para contar todo rolê de ter uma bike fixa (fixed gear)`,
-  siteUrl: `https://engrenagemfixa.nandomoreira.dev/`,
-  social: {
-    twitter: `oseunando`,
+  description: `Um blog para contar todo rolê de ter uma bike fixa (fixed gear)`,
+  siteUrl: `https://engrenagemfixa.com.br/`,
+  author: {
+    name: `Fernando Moreira`,
+    bio: `${currentYear -
+      1989} anos, pai, minimalista, programador não por formação mas por vocação, piadista e ciclista nas horas vagas`,
+    social: {
+      strava: `oseunando`,
+      twitter: `oseunando`,
+    },
   },
 };
 
@@ -104,16 +112,16 @@ const plugins = [
       short_name: siteMetadata.title,
       start_url: `/`,
       background_color: `#ffffff`,
-      theme_color: `#663399`,
+      theme_color: `#393939`,
       display: `minimal-ui`,
-      icon: `content/assets/icon.png`,
+      icon: `${__dirname}/content/assets/icon.png`,
     },
   },
   `gatsby-plugin-react-helmet`,
   {
     resolve: `gatsby-plugin-typography`,
     options: {
-      pathToConfigModule: `src/styles/typography`,
+      pathToConfigModule: `${__dirname}/src/styles/typography`,
     },
   },
   // this (optional) plugin enables Progressive Web App + Offline functionality
@@ -129,7 +137,7 @@ const plugins = [
     resolve: `gatsby-plugin-sitemap`,
     options: {
       output: `/sitemap.xml`,
-      exclude: [`/404`],
+      exclude: [`/404`, `/404.html`],
       sitemapSize: 5000,
     },
   },

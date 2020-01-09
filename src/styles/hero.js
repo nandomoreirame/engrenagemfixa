@@ -40,28 +40,45 @@ export const HeroStyle = styled.section`
 
 export const HeroTitleStyle = styled.h1`
   font-size: 1.4rem;
-  margin: 0 0 1.4rem;
+  margin: 0;
   text-transform: uppercase;
   color: #fff;
-  font-weight: 500;
+  font-weight: 600;
 
   @media (min-width: 420px) {
     font-size: 2.4rem;
     margin: 0;
+
+    &:hover,
+    &:focus {
+      img {
+        transform: rotate(360deg);
+      }
+    }
   }
 
   a {
     box-shadow: none;
     text-decoration: none;
     color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  img {
+    width: 64px;
+    display: inline-block;
+    margin: 0 1.2rem 0 0;
+    transition: transform 0.12s ease-in-out;
   }
 
   small {
-    text-transform: lowercase;
+    text-transform: initial;
     display: block;
     font-size: 60%;
     opacity: 0.75;
     font-weight: 300;
-    margin-top: 1rem;
+    margin-top: 1.2rem;
   }
 `;

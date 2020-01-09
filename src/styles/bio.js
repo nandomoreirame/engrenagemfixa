@@ -39,7 +39,7 @@ export const BioStyle = styled.aside`
 
   .gatsby-image-wrapper {
     margin: 0 0 1.2rem;
-    min-width: 260px;
+    min-width: 300px;
     width: auto !important;
 
     @media (min-width: 560px) {

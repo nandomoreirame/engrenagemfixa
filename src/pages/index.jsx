@@ -14,7 +14,7 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout title={title} description={description}>
-        <SEO title="Todos os posts" />
+        <SEO title={`${description}`} />
         <Bio />
         <section>
           {posts.map(({ node }) => (
