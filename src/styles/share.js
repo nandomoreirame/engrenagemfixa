@@ -42,15 +42,18 @@ export const ShareStyles = styled.aside`
 
   button {
     appearance: none;
-    transition: transform 0.12s ease-in-out;
 
     &:not(:last-child) {
       margin-right: 5px;
     }
 
-    &:hover,
-    &:focus {
-      transform: translate3d(0, -4px, 0) rotate(-7deg);
+    @media (min-width: 790px) {
+      transition: transform 0.12s ease-in-out;
+
+      &:hover,
+      &:focus {
+        transform: translate3d(0, -4px, 0) scale(1.1);
+      }
     }
   }
 `;

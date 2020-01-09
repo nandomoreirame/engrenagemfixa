@@ -10,6 +10,7 @@ categories:
 tags:
   - Rolezin
 comments: true
+cover: './images/bem-vindo-ao-engrenagem-fixa-antes-de-serrar-guidao.jpg'
 ---
 
 E aí rolezeiro! Tudo bom contigo?

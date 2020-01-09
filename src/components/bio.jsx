@@ -13,9 +13,9 @@ import { BioStyle } from '@styles';
 export default () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
-      avatar: file(absolutePath: { regex: "/profile-pic.png/" }) {
+      avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
         childImageSharp {
-          fixed(width: 100, height: 100) {
+          fixed(width: 300, height: 300) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -40,18 +40,40 @@ export default () => {
     <BioStyle>
       <div>
         <Image fixed={data.avatar.childImageSharp.fixed} alt={author} />
-        <p>
-          Por <strong>{author}</strong>, {age} anos, pai, minimalista,
-          programador e ciclista nas horas vagas.{' '}
-          <strong>Siga no twitter:</strong> {` `}
-          <a
-            href={`https://twitter.com/${social.twitter}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @{social.twitter}
-          </a>
-        </p>
+        <div>
+          <h3>{author}</h3>
+          <p>
+            {age} anos, pai, minimalista, programador não por formação mas por
+            vocação, piadista e ciclista nas horas vagas
+            <a
+              href={`https://nandomoreira.dev/sobre`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ...
+            </a>
+          </p>
+          <p>
+            <strong>Twitter:</strong> {` `}
+            <a
+              href={`https://twitter.com/${social.twitter}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @{social.twitter}
+            </a>
+          </p>
+          <p>
+            <strong>Strava:</strong> {` `}
+            <a
+              href={`https://strava.com/athletes/${social.twitter}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @{social.twitter}
+            </a>
+          </p>
+        </div>
       </div>
     </BioStyle>
   );

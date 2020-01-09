@@ -20,28 +20,26 @@ class BlogPostTemplate extends React.Component {
       description,
       date,
       comments,
+      cover,
     } = markdownRemark.frontmatter;
     const minutes = markdownRemark.timeToRead.toFixed();
     const { words } = markdownRemark.fields.readingTime;
     const __html = markdownRemark.html;
-
+    const __excerpt = markdownRemark.excerpt;
     return (
-      <Layout location={this.props.location} title={siteMetadata.title}>
-        <SEO
-          title={title}
-          description={description || markdownRemark.excerpt}
-        />
+      <Layout
+        title={siteMetadata.title}
+        description={siteMetadata.description}
+        image={cover.childImageSharp.sizes.src}
+      >
+        <SEO title={title} description={description || __excerpt} />
         <article>
           <PostHeaderStyle>
             <div>
               <h1>{title}</h1>
               <em>
-                Publicado {date} | Tempo de leitura:{' '}
-                <strong role="timer">
-                  {minutes} minuto
-                  {`${minutes > 1 ? 's' : ''}`}
-                </strong>{' '}
-                - {words} palavras.
+                Publicado {date} | {minutes} minuto
+                {`${minutes > 1 ? 's' : ''}`} de leitura - {words} palavras.
               </em>
             </div>
           </PostHeaderStyle>
@@ -51,7 +49,7 @@ class BlogPostTemplate extends React.Component {
           <footer>
             <Bio />
             {(previous || next) && <PostNav previous={previous} next={next} />}
-            {comments && (
+            {!!comments && (
               <Disqus
                 url={`${siteMetadata.siteUrl}/${slug}`}
                 identifier={slug}
@@ -73,6 +71,7 @@ export const pageQuery = graphql`
       siteMetadata {
         siteUrl
         title
+        description
       }
     }
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
@@ -86,6 +85,13 @@ export const pageQuery = graphql`
         date(locale: "pt-br", fromNow: true)
         description
         comments
+        cover {
+          childImageSharp {
+            sizes(maxWidth: 1024) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
       }
       fields {
         slug

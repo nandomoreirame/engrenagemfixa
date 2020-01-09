@@ -11,7 +11,7 @@ export const GlobalStyles = css`
   }
 
   body {
-    background-color: #f6f5f1;
+    background-color: #faf9fe;
   }
 
   a[target='_blank'] {

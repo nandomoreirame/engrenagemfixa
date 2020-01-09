@@ -12,6 +12,7 @@ export const PostNavStyle = styled.nav`
     top: 50%;
     transform: translate3d(0, -50%, 0);
     pointer-events: none;
+    z-index: 1000;
   }
 
   &::after {

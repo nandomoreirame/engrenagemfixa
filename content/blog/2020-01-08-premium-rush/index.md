@@ -11,6 +11,7 @@ tags:
   - Dicas
   - Filmes
 comments: true
+cover: './filme-premium-rush-capa.jpg'
 ---
 
 Hoje eu vou mandar uma dica de filme, um filminho antigo já (de 2012) mas vale parar para assistir, é entretenimento certo!

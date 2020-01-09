@@ -1,5 +1,5 @@
 const siteMetadata = {
-  title: `🚴 Engrenagem Fixa`,
+  title: `Engrenagem Fixa`,
   author: `Fernando Moreira`,
   description: `🚴 Um blog para contar todo rolê de ter uma bike fixa (fixed gear)`,
   siteUrl: `https://engrenagemfixa.nandomoreira.dev/`,

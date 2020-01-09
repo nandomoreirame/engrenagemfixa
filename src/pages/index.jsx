@@ -10,9 +10,10 @@ class BlogIndex extends React.Component {
   render() {
     const { data } = this.props;
     const posts = data.allMarkdownRemark.edges;
+    const { title, description } = data.site.siteMetadata;
 
     return (
-      <Layout title={data.site.siteMetadata.title}>
+      <Layout title={title} description={description}>
         <SEO title="Todos os posts" />
         <Bio />
         <section>
@@ -32,6 +33,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
@@ -50,6 +52,13 @@ export const pageQuery = graphql`
             date(locale: "pt-br", fromNow: true)
             title
             description
+            cover {
+              childImageSharp {
+                sizes(maxWidth: 1024) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
           }
         }
       }
